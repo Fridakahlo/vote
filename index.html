@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+	<!-- css-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<title>Vote</title>
+
+</head>
+
+ <body>		
+    <div id="app">
+        <div class="container">    
+            <div class="row">    
+              	Moi, 
+               <form-user v-model="user"></form-user>
+                   <p>
+                       {{ user }}
+                   </p> 
+               <input class="form-control mt-5" type="text" name="name" placeholder="Name"/>          
+            </div>
+        
+            <div class="row mt-5"> 
+                <div class="col-md-6 md-auto" id="btnOui">
+                     <button v-on:click="counter += 1" type="button" class="btn btn-success btn-lg btn-block" >OUI</button>
+                     <!-- <p>Le bouton ci-dessus a été cliqué {{ counter }} fois.</p> -->
+                </div>    
+                <div class="col-md-6 md-auto" id="btnNon">
+                       <button v-on:click="counter += 1" type="button" class="btn btn-danger btn-lg btn-block">NON</button>
+                       <!-- <p>Le bouton ci-dessus a été cliqué {{ counter }} fois. --></p>
+                </div>            
+	        	<div class="row justify-content-center" id="lienSaisPas">
+	                <a href="#" v-on:click="counter += 1"> Je ne sais pas</a>
+	                <!-- <p>Le bouton ci-dessus a été cliqué {{ counter }} fois.</p> -->          
+	    		</div>
+            </div>       
+        </div>
+        <app-wrapper></app-wrapper>
+        <app-nav></app-nav>
+    </div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+	<script type="text/javascript" src="list.json"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
